@@ -1,0 +1,606 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>PageCRM</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Кодировка страницы -->
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+
+	<div class="wrapper">
+		<header class="header">
+			<nav class="header__nav" data-lock>
+				<div class="header__logo">
+					<a href="https://alpham.pro/"><img src="./img/header/alpham-logo_white.svg"
+							alt="logo Alpha marketing"></a>
+				</div>
+				<nav class="header__menu">
+					<ul class="header__list">
+						<li class="header__item"><a id="service" class="header__link header__link_active"
+								href="#">Услуги</a></li>
+						<li class="header__item"><a id="case" class="header__link" href="#">Кейсы</a></li>
+						<li class="header__item"><a id="more" class="header__link" href="#">Ещё</a></li>
+						<a class="header__btn btn" href="#popup-request" data-popup-link>Задать вопрос</a>
+					</ul>
+					<div class="header__search">
+						<a href="#"><img src="./img/header/search.svg" alt="Search"></a>
+					</div>
+				</nav>
+				<div class="header__right">
+					<div class="header__tel">
+						<a href="tel:88124095222">8 812 409-52-22</a>
+					</div>
+					<a class="header__btn btn" href="#popup-request" data-popup-link>Задать вопрос</a>
+				</div>
+				<div class="header__burger"><a href="#"><span></span></a></div>
+				<form class="header__form form-search" action="#">
+					<button class="form-search__btn" type="submit">
+						<img src="./img/header/search.svg" alt="Search">
+					</button>
+					<input class="form-search__text" type="text" name="search_request">
+				</form>
+			</nav>
+			<nav class="header__breadcrumbs breadcrumbs">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="#">Главная</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="#">Услуги Альфа маркетинг</a>
+					</li>
+					<li class="breadcrumbs__current">CRM</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main class="pagecrm__main">
+			<section class="pagecrm__crm crm">
+				<div class="container">
+					<h1 class="crm__title title">CRM</h1>
+					<div class="crm__img">
+						<img src="./img/main/crm/crm.webp"
+							alt="crm reliable assistant in business (Improving efficiency)">
+					</div>
+					<div class="crm__btn-wrapper">
+						<a class="crm__btn" href="#popup-request" data-popup-link>Оставить завку</a>
+					</div>
+				</div>
+			</section>
+			<div class="pagecrm__bg-design">
+				<section class="pagecrm__manag-stm manag-stm">
+					<div class="container">
+						<h2 class="manag-stm__title title">Управление бизнес-процессами</h2>
+						<div class="manag-stm__row">
+							<figure class="manag-stm__column manag-stm__column_01">
+								<div class="manag-stm__icon">
+									<img src="./img/main/manag-stm/icon-efficiency.webp" alt="icon">
+								</div>
+								<figcaption class="manag-stm__name">Повышение эффективности <br> отдела продаж
+								</figcaption>
+							</figure>
+							<figure class="manag-stm__column manag-stm__column_02">
+								<div class="manag-stm__icon">
+									<img src="./img/main/manag-stm/icon-communication.webp" alt="icon">
+								</div>
+								<figcaption class="manag-stm__name">Удобное общение <br> с заказчиками</figcaption>
+							</figure>
+							<figure class="manag-stm__column manag-stm__column_03">
+								<div class="manag-stm__icon">
+									<img src="./img/main/manag-stm/icon-bestCRM.webp" alt="icon">
+								</div>
+								<figcaption class="manag-stm__name">Лучшие <br> CRM-системы</figcaption>
+							</figure>
+							<figure class="manag-stm__column manag-stm__column_04">
+								<div class="manag-stm__icon">
+									<img src="./img/main/manag-stm/icon-card.webp" alt="icon">
+								</div>
+								<figcaption class="manag-stm__name">Карточка с историей <br> событий для каждого
+									заказчика
+								</figcaption>
+							</figure>
+						</div>
+						<div class="manag-stm__row2">
+							<div class="manag-stm__column2-wrapper">
+								<section class="manag-stm__column2">
+									<h3 class="screenreader">system amoCRM</h3>
+									<div class="manag-stm__img">
+										<img src="./img/main/manag-stm/amo.webp" alt="interface system amoCRM">
+									</div>
+									<div class="manag-stm__right">
+										<h5 class="manag-stm__subtitle"><span>Функции:</span></h5>
+										<ul class="manag-stm__list">
+											<li class="manag-stm__item">CRM</li>
+											<li class="manag-stm__item">Интеграция с другими сервисами</li>
+											<li class="manag-stm__item">Онлайн-бот</li>
+										</ul>
+									</div>
+								</section>
+							</div>
+							<div class="manag-stm__column2-wrapper">
+								<section class="manag-stm__column2">
+									<h3 class="screenreader">system bitrix24</h3>
+									<div class="manag-stm__img">
+										<img src="./img/main/manag-stm/bitrix.webp" alt="interface system bitrix24">
+									</div>
+									<div class="manag-stm__right">
+										<h5 class="manag-stm__subtitle"><span>Функции:</span></h5>
+										<ul class="manag-stm__list">
+											<li class="manag-stm__item">CRM</li>
+											<li class="manag-stm__item">Корпоративный портал</li>
+											<li class="manag-stm__item">Онлайн офис</li>
+											<li class="manag-stm__item">Интеграция с другими сервисами и т.д.</li>
+										</ul>
+									</div>
+								</section>
+							</div>
+						</div>
+						<section class="manag-stm__form-wrapper form-wrapper">
+							<div class="form-wrapper__bg">
+								<h3 class="form-wrapper__title">Оcтавить заявку</h3>
+								<p class="form-wrapper__text">Выберите систему для вашего бизнеса, и мы свяжемся с Вами
+									в течение 20 минут</p>
+								<form name="managForm" class="form-wrapper__main-form" action="#">
+									<div class="form-wrapper__border">
+										<input class="form-wrapper__name form-item1 placeholder" type="text" name="name"
+											placeholder="Ваше имя" required>
+									</div>
+									<div class="form-wrapper__border">
+										<input class="form-wrapper__tel form-item1" data-tel-input type="tel"
+											name="tel">
+									</div>
+									<div class="form-wrapper__select form-item1" tabindex="0">
+										<input checked type="radio" name="item" id="initial1" value="">
+										<label class="form-wrapper__option" for="initial1">
+											<span>Выберите систему</span>
+										</label>
+										<input type="radio" name="item" id="amo" value="amoCRM">
+										<label class="form-wrapper__option" for="amo">
+											<span>amoCRM</span>
+										</label>
+										<input type="radio" name="item" id="bitrix" value="bitrix24">
+										<label class="form-wrapper__option" for="bitrix">
+											<span>Битрикс24</span>
+										</label>
+										<input type="radio" name="item" id="help" value="help!">
+										<label class="form-wrapper__option" for="help">
+											<span>Нужна помощь в выборе</span>
+										</label>
+									</div>
+									<div class="form-wrapper__border">
+										<textarea class="form-wrapper__message form-item1 placeholder" name="message"
+											placeholder="Напишите что вас интересует, например: Покупка лицензии amoCRM"
+											required></textarea>
+									</div>
+									<button class="form-wrapper__btn btn" type="submit">Оставить
+										заявку</button>
+								</form>
+							</div>
+						</section>
+					</div>
+				</section>
+				<section class="pagecrm__benefit benefit">
+					<div class="container">
+						<h2 class="benefit__title title">Кому полезна CRM</h2>
+						<div class="benefit__wrapper">
+							<div class="benefit__main">
+								<ul class="benefit__list">
+									<li class="benefit__item">Любому бизнесу, работающему с клиентской базой</li>
+									<li class="benefit__item">Бизнесу, управляющему ассортиментом</li>
+									<li class="benefit__item">Бизнесу, где есть задачи, планирование, отчетность и KPI
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<section class="pagecrm__business business">
+				<div class="container">
+					<h2 class="business__title title">CRM в бизнесе</h2>
+					<h4 class="business__subtitle subtitle"><span>Наши кейсы</span></h4>
+					<div class="business__row">
+						<article class="business__article">
+							<div class="business__image">
+								<img src="./img/main/business/pestovsky-lesokombinat.webp" alt="logo">
+							</div>
+							<div class="business__right">
+								<h6 class="business__name">“Пестовский Лесокомбинат”</h6>
+								<p class="business__text">Строительная компания</p>
+								<b class="business__technology"><span>Работают на платформе amoCRM</span></b>
+								<a class="business__btn" href="#">Подробнее</a>
+							</div>
+						</article>
+						<article class="business__article">
+							<div class="business__image">
+								<img src="./img/main/business/mongol-store.webp" alt="logo">
+							</div>
+							<div class="business__right">
+								<h6 class="business__name">Магазин “Mongol Store”</h6>
+								<p class="business__text">Одежда из натуральной шерсти</p>
+								<b class="business__technology"><span>Используют БитриксCRM</span></b>
+								<a class="business__btn" href="#">Подробнее</a>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<section class="pagecrm__price price">
+				<div class="container">
+					<h2 class="price__title title">Стоимость подключения</h2>
+					<div class="price__wrapper">
+						<div class="price__row1">
+							<section class="price__card">
+								<h3 class="screenreader">Услуга №1</h3>
+								<dl class="price__service">
+									<dt class="price__name">Подключение системы CRM</dt>
+									<dd class="price__value"><span>от 10 000 ₽</span></dd>
+								</dl>
+								<ul class="price__list">
+									<li class="price__item">Покупка любого тарифа со скидкой</li>
+								</ul>
+								<a class="price__btn btn" href="#popup-order" data-popup-link>Заказать</a>
+							</section>
+							<section class="price__card">
+								<h3 class="screenreader">Услуга №2</h3>
+								<dl class="price__service">
+									<dt class="price__name">Подключение системы CRM + настройка</dt>
+									<dd class="price__value"><span>от 15 000 ₽</span></dd>
+								</dl>
+								<ul class="price__list">
+									<li class="price__item">Покупка любого тарифа со скидкой</li>
+									<li class="price__item">Индивидуальная настройка системы</li>
+								</ul>
+								<a class="price__btn btn" href="#popup-order" data-popup-link>Заказать</a>
+							</section>
+						</div>
+						<div class="price__row2">
+							<section class="price__card">
+								<h3 class="screenreader">Услуга №3</h3>
+								<dl class="price__service">
+									<dt class="price__name">Продление лицензий <br> amoCRM и Битрикс24</dt>
+									<dd class="price__value"><span>от 10 000 ₽</span></dd>
+								</dl>
+								<ul class="price__list">
+									<li class="price__item">Возможность продления лицензий со скидкой от официальных цен
+									</li>
+								</ul>
+								<a class="price__btn btn" href="#popup-order" data-popup-link>Заказать</a>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="pagecrm__request request">
+				<div class="container">
+					<h2 class="request__title title">Заявка на подбор и подключение CRM-системы</h2>
+					<h4 class="request__subtitle subtitle">
+						<span>
+							Проведем аудит, подготовим решение для вашего бизнеса и рассчитаем стоимость
+						</span>
+					</h4>
+					<div class="request__form-wrapper">
+						<div class="request__container">
+							<h3 class="request__text">Заполните форму</h3>
+							<p class="request__note">Оставьте свои контактные данные, <br> мы свяжемся с Вами в течение
+								20 минут</p>
+							<form name="requestForm" class="request__form" action="#">
+								<div class="request__border">
+									<input class="request__name form-item1 placeholder" type="text" name="name"
+										placeholder="Имя" required>
+								</div>
+								<div class="request__border">
+									<input class="request__tel form-item1" data-tel-input type="tel" name="tel">
+								</div>
+								<div class="request__select form-item1" tabindex="0">
+									<input checked type="radio" name="item" id="initial2" value="">
+									<label class="request__option" for="initial2">
+										<span>Выберите услугу</span>
+									</label>
+									<input type="radio" name="item" id="сonnect" value="сonnect">
+									<label class="request__option" for="сonnect">
+										<span>Подключение</span>
+									</label>
+									<input type="radio" name="item" id="setup" value="сonnect-setup">
+									<label class="request__option" for="setup">
+										<span>Подключение + настройка</span>
+									</label>
+									<input type="radio" name="item" id="renewal" value="lic-renewal">
+									<label class="request__option" for="renewal">
+										<span>Продление лицензий amoCRM или Битрикс24</span>
+									</label>
+								</div>
+								<button class="request__btn btn" type="submit">Отправить заявку</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="pagecrm__partners partners">
+				<div class="container">
+					<h2 class="partners__title title">Наш партнёр по CRM-системам</h2>
+					<div class="partners__row">
+						<div class="partners__links" data-one-spoiler>
+							<details class="partners__partner">
+								<summary class="partners__link">Битрикс24 (Управление бизнесом)</summary>
+								<a class="partners__btn" href="#">Подробнее</a>
+							</details>
+							<details class="partners__partner">
+								<summary class="partners__link">amoCRM (Управление бизнесом)</summary>
+								<a class="partners__btn" href="#">Подробнее</a>
+							</details>
+						</div>
+						<div class="partners__image">
+							<img src="./img/main/partners/partners.webp" alt="Company partners (Bitrix24 and amoCRM)">
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="pagecrm__feedback feedback">
+				<div class="container">
+					<h2 class="screenreader">Оставить сообщение</h2>
+					<div class="feedback__wrapper">
+						<div class="feedback__info">
+							<h3 class="feedback__title">Напишите нам!</h3>
+							<p class="feedback__text">Заполните заявку и Мы <br> свяжемся с Вами в течение <br> 15 минут
+							</p>
+							<p class="feedback__sign">Команда Alpha marketing</p>
+						</div>
+						<form class="feedback__form" action="#">
+							<input class="feedback__name placeholder" type="text" name="name" placeholder="Имя*"
+								required>
+							<input class="feedback__email placeholder" type="email" name="email" placeholder="@Почта*"
+								required>
+							<input class="feedback__tel" data-tel-input type="tel" name="tel">
+							<textarea class="feedback__message placeholder" name="message" placeholder="Задать вопрос"
+								required></textarea>
+							<button class="feedback__btn btn" type="submit">Задать вопрос</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__top">
+					<div class="footer__left">
+						<h3 class="footer__subtitle">Меню</h3>
+						<nav class="footer__menu">
+							<ul class="footer__list">
+								<li class="footer__item"><a href="#">Услуги</a></li>
+								<li class="footer__item"><a href="#">Кейсы</a></li>
+								<li class="footer__item"><a href="#">Ещё</a></li>
+							</ul>
+						</nav>
+						<div class="footer__logo">
+							<img src="./img/footer/alpham-logo_white.svg" alt="logo Alpha marketing">
+						</div>
+					</div>
+					<div class="footer__center">
+						<h3 class="footer__subtitle">
+							<a class="footer__contacts" href="#">Контакты</a>
+						</h3>
+						<address class="footer__address">
+							<p>Санкт-Петербург</p>
+							<p>Заозёрная 8, к.2, офис 202</p>
+							<p class="footer__time">Пн-Пт, 10:00 - 18:00</p>
+							<a class="footer__tel" href="tel:88124095222">8 (812) 409-52-22</a>
+							<a class="footer__email" href="mailto:info@alpham.pro">info@alpham.pro</a>
+							<div class="footer__icon">
+								<a href="#"><img src="./img/footer/vk-icon.svg" alt="icon vk"></a>
+							</div>
+							<div class="footer__icon">
+								<a href="#"><img src="./img/footer/tg-icon.svg" alt="icon telegram"></a>
+							</div>
+						</address>
+					</div>
+					<div class="footer__right">
+						<div class="footer__map-wrapper">
+							<script
+								src="https://api-maps.yandex.ru/2.0/?load=package.full&mode=release&lang=ru-RU&wizard=bitrix"></script>
+							<script>
+								ymaps.ready(init);
+								let center = [59.90747806421724, 30.324797499999896];
+
+								function init() {
+									let map = new ymaps.Map("map", {
+										center: center,
+										zoom: 16,
+										type: 'yandex#map'
+
+									});
+
+									let placemark = new ymaps.Placemark(center, {
+										balloonContentBody: 'ул. Заозёрная, д. 8, к. 2, оф. 202'
+									}, {
+										iconLayout: 'default#image',
+										iconImageHref: './img/footer/pin.svg',
+										iconImageSize: [70, 70],
+										iconImageOffset: [-33, -72]
+									});
+
+									map.behaviors.disable("scrollZoom");
+									map.behaviors.disable("rightMouseButtonMagnifier");
+									map.behaviors.enable("dblClickZoom");
+									map.behaviors.enable("drag");
+									map.controls.add('zoomControl');
+									map.controls.add('typeSelector');
+									map.controls.add('scaleLine');
+
+									map.geoObjects.add(placemark);
+								}
+							</script>
+							<div id="map" class="footer__ymap"></div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__logo">
+						<img src="./img/footer/alpham-logo_white.svg" alt="logo Alpha marketing">
+					</div>
+					<div class="footer__icons">
+						<div class="footer__icon">
+							<a href="#"><img src="./img/footer/vk-icon.svg" alt="icon vk"></a>
+						</div>
+						<div class="footer__icon">
+							<a href="#"><img src="./img/footer/tg-icon.svg" alt="icon telegram"></a>
+						</div>
+					</div>
+					<p class="footer__text">© 2023 Альфа маркетинг</p>
+					<a class="footer__link" href="#">Политика конфиденциальности</a>
+					<a class="footer__link" href="#">Карта сайта</a>
+				</div>
+			</div>
+		</footer>
+
+		<div class="sticky-btns">
+			<ul class="sticky-btns__list">
+				<li class="sticky-btns__item">
+					<a class="sticky-btns__link" href="#">
+						<svg width="14" height="32" viewBox="0 0 19 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M9.04142 21.6667C8.37476 21.6667 7.81254 21.4306 7.35476 
+								20.9583C6.89698 20.4861 6.69531 19.9306 6.74976 19.2917C6.83309 
+								18.125 7.11087 17.1111 7.58309 16.25C8.05531 15.3889 8.80532 
+								14.5 9.83309 13.5833C10.972 12.5833 11.8403 11.715 12.4381 
+								10.9783C13.0359 10.2417 13.3342 9.40167 13.3331 8.45833C13.3331 
+								7.31944 12.9514 6.375 12.1881 5.625C11.4248 4.875 10.362 4.5 
+								8.99976 4.5C8.11087 4.5 7.35365 4.68778 6.72809 5.06333C6.10254 
+								5.43889 5.59587 5.90389 5.20809 6.45833C4.8192 7.01389 4.34031
+								 7.38889 3.77143 7.58333C3.20254 7.77778 2.65365 7.76389 2.12476 
+								 7.54167C1.48587 7.26389 1.04865 6.80555 0.813092 6.16667C0.577537 
+								 5.52778 0.62587 4.93056 0.958093 4.375C1.76365 3.125 2.84698 2.08333 
+								 4.20809 1.25C5.5692 0.416667 7.16643 0 8.99976 0C11.9164 0 14.1598 
+								 0.812222 15.7298 2.43667C17.2998 4.06111 18.0842 6.01278 18.0831 
+								 8.29167C18.0831 9.68056 17.7848 10.8683 17.1881 11.855C16.5914 
+								 12.8417 15.6536 13.9594 14.3748 15.2083C13.4303 16.0972 12.7636 
+								 16.8194 12.3748 17.375C11.9859 17.9306 11.722 18.5694 11.5831 
+								 19.2917C11.472 19.9861 11.1803 20.5556 10.7081 21C10.2359 21.4444 
+								 9.68031 21.6667 9.04142 21.6667ZM8.99976 31.6667C8.08309 31.6667 
+								 7.29809 31.34 6.64476 30.6867C5.99143 30.0333 5.66531 29.2489 5.66643 
+								 28.3333C5.66643 27.4167 5.99309 26.6317 6.64643 25.9783C7.29976 25.325 
+								 8.0842 24.9989 8.99976 25C9.91643 25 10.7014 25.3267 11.3548 25.98C12.0081 
+								 26.6333 12.3342 27.4178 12.3331 28.3333C12.3331 29.25 12.0064 30.035 
+								 11.3531 30.6883C10.6998 31.3417 9.91531 31.6678 8.99976 31.6667Z" fill="#F8EDFF" />
+						</svg>
+					</a>
+				</li>
+				<li class="sticky-btns__item">
+					<a class="sticky-btns__link" href="#popup-request" data-popup-link>
+						<svg width="22" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M28.25 30C24.6667 30 21.1739 29.2011 17.7717 
+								27.6033C14.3694 26.0056 11.3556 23.8944 8.73 
+								21.27C6.10444 18.6456 3.99333 15.6317 2.39667 
+								12.2283C0.8 8.825 0.00111111 5.33222 0 1.75C0 
+								1.25 0.166667 0.833333 0.5 0.5C0.833333 0.166667 
+								1.25 0 1.75 0H8.5C8.88889 0 9.23611 0.125 9.54167 
+								0.375C9.84722 0.625 10.0278 0.944444 10.0833 1.33333L11.1667 
+								7.16667C11.2222 7.55556 11.215 7.91 11.145 8.23C11.075 
+								8.55 10.9156 8.83444 10.6667 9.08333L6.66667 13.1667C7.83333 
+								15.1667 9.29167 17.0417 11.0417 18.7917C12.7917 20.5417 
+								14.7222 22.0556 16.8333 23.3333L20.75 19.4167C21 19.1667 
+								21.3267 18.9794 21.73 18.855C22.1333 18.7306 22.5289 
+								18.6956 22.9167 18.75L28.6667 19.9167C29.0556 20 29.375 20.1878 
+								29.625 20.48C29.875 20.7722 30 21.1122 30 21.5V28.25C30 28.75 
+								29.8333 29.1667 29.5 29.5C29.1667 29.8333 28.75 30 28.25 30Z" fill="#F8EDFF" />
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="bottom-icons-panel" data-lock>
+			<a class="bottom-icons-panel__btn" href="#">
+				<i class="bottom-icons-panel__img"><img src="./img/bottom-icons-panel/main_bottom.svg" alt="icon"></i>
+				<span class="bottom-icons-panel__text">Главная</span>
+			</a>
+			<a class="bottom-icons-panel__btn bottom-icons-panel__btn_active" href="#">
+				<i class="bottom-icons-panel__img"><img src="./img/bottom-icons-panel/service_bottom.svg"
+						alt="icon"></i>
+				<span class="bottom-icons-panel__text">Услуги</span>
+			</a>
+			<a class="bottom-icons-panel__btn" href="#">
+				<i class="bottom-icons-panel__img"><img src="./img/bottom-icons-panel/case_bottom.svg" alt="icon"></i>
+				<span class="bottom-icons-panel__text">Кейсы</span>
+			</a>
+			<a class="bottom-icons-panel__btn" href="#">
+				<i class="bottom-icons-panel__img"><img src="./img/bottom-icons-panel/contact_bottom.svg"
+						alt="icon"></i>
+				<span class="bottom-icons-panel__text">Контакты</span>
+			</a>
+		</div>
+
+		<div id="popup-order" class="popup">
+			<div class="popup__body">
+				<div class="popup__content">
+					<a class="popup__close" href="#"></a>
+					<h3 class="popup__title">Форма для заполнения</h3>
+					<p class="popup__text">Оставьте свои контактные данные, и мы свяжемся с Вами в течение 20 минут
+					</p>
+					<form class="popup__form" action="#">
+						<div class="popup__input-br">
+							<input class="popup__name placeholder" type="text" name="name" placeholder="Имя*" required>
+						</div>
+						<div class="popup__input-br">
+							<input class="popup__email placeholder" type="email" name="email" placeholder="@Почта*"
+								required>
+						</div>
+						<button class="popup__btn btn" type="submit">Отправить заявку</button>
+						<label class="popup__checkbox">
+							<input type="checkbox" name="agreement" value="agree" checked required>
+							<span>Нажимая на кнопку, я соглашаюсь с условиями <a href="#">политики
+									конфиденциальности</a></span>
+						</label>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div id="popup-sent" class="popup">
+			<div class="popup__body">
+				<div class="popup__content">
+					<a class="popup__close" href="#"></a>
+					<div class="popup__img"></div>
+					<h3 class="popup__title">Ваша заявка успешно отправлена!</h3>
+				</div>
+			</div>
+		</div>
+
+		<div id="popup-request" class="popup">
+			<div class="popup__body">
+				<div class="popup__content">
+					<a class="popup__close" href="#"></a>
+					<h3 class="popup__title">Оставить заявку</h3>
+					<p class="popup__text">Оставьте свои контактные данные, и мы свяжемся с Вами в течение 20 минут
+					</p>
+					<form class="popup__form" action="#">
+						<div class="popup__input-br">
+							<input class="popup__tel" type="tel" name="tel" data-tel-input>
+						</div>
+						<button class="popup__btn btn" type="submit">Отправить</button>
+						<label class="popup__checkbox">
+							<input type="checkbox" name="agreement" value="agree" checked required>
+							<span>Нажимая на кнопку, я соглашаюсь с условиями <a href="#">политики
+									конфиденциальности</a></span>
+						</label>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://unpkg.com/imask"></script>
+	<script src="js/script.js"></script>
+
+</body>
+
+</html>
