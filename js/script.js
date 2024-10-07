@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('resize', function () {
-        if (body.offsetWidth > 640 && headerMenu.classList.contains('_active')) {
+        if (body.offsetWidth > 623 && headerMenu.classList.contains('_active')) {
             closeMenu();
         }
     });
