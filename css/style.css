@@ -688,7 +688,7 @@ body._lock {
   }
 }
 .pagecrm__bg-design {
-  background: url(../img/bg-design02.svg) 0 70%/contain no-repeat;
+  background: url(../img/bg-design02.svg) center/contain no-repeat;
   margin-bottom: 186px;
 }
 @media (max-width: 980px) {
@@ -2565,14 +2565,12 @@ body._lock {
 @media (max-width: 640px) {
   .popup__content {
     max-width: 340px;
-    padding: 39px 44px;
   }
 }
 .popup__content::before {
   background: linear-gradient(93deg, #383FEC 49.3%, #23FFFF 87.76%) border-box;
 }
 .popup__close {
-  content: "";
   position: absolute;
   top: 20px;
   right: 20px;
@@ -2624,6 +2622,10 @@ body._lock {
   .popup__text {
     font-size: 14px;
   }
+}
+.popup__text span {
+  color: red;
+  margin-left: 4px;
 }
 .popup__form {
   display: flex;
@@ -2713,6 +2715,141 @@ body._lock {
   text-decoration: underline;
   color: #FFFFFF;
 }
+.popup__quiz#quiz02, .popup__quiz#quiz03 {
+  display: none;
+}
+.popup__quiz#quiz01 .popup__btn#btn1, .popup__quiz#quiz01 .popup__text {
+  visibility: hidden;
+}
+.popup__quiz {
+  display: flex;
+  flex-direction: column;
+  min-width: 379px;
+}
+@media (max-width: 640px) {
+  .popup__quiz {
+    min-width: 270px;
+  }
+}
+@media (max-width: 360px) {
+  .popup__quiz {
+    min-width: 220px;
+  }
+}
+.popup__radio {
+  background: rgba(158, 0, 255, 0.15);
+  padding: 15px 10px 16px;
+  display: flex;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+@media (max-width: 640px) {
+  .popup__radio {
+    margin-bottom: 8px;
+  }
+}
+.popup__radio input {
+  display: none;
+}
+.popup__radio span {
+  font-size: 16px;
+  padding-left: 30px;
+  line-height: 33px;
+  position: relative;
+}
+@media (max-width: 640px) {
+  .popup__radio span {
+    font-size: 14px;
+    padding-left: 26px;
+    line-height: 23px;
+  }
+}
+.popup__radio span::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border-radius: 50%;
+}
+@media (max-width: 640px) {
+  .popup__radio span::before {
+    width: 18px;
+    height: 18px;
+  }
+}
+.popup__radio span::after {
+  content: "";
+  display: none;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  background: #AD6DFF;
+  border-radius: 50%;
+  border: 3px solid #E7D4FF;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (max-width: 640px) {
+  .popup__radio span::after {
+    width: 10px;
+    height: 10px;
+  }
+}
+.popup__radio input:checked + span::after {
+  display: inline-block;
+}
+.popup__radio._error span::before {
+  border: 2px solid rgb(245, 132, 33);
+}
+.popup__block {
+  display: none;
+}
+.popup__btns {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 640px) {
+  .popup__btns {
+    margin-top: 20px;
+  }
+}
+.popup__other {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 12px 15px;
+  line-height: 33px;
+  font-size: 15px;
+}
+.popup__other::-moz-placeholder {
+  color: #fff;
+}
+.popup__other::placeholder {
+  color: #fff;
+}
+.popup__other._error {
+  border: 1px solid rgb(245, 132, 33);
+}
+.popup__search {
+  border-radius: 50px;
+  border: 1px solid transparent;
+  background: linear-gradient(rgba(0, 0, 0, 0.831372549), rgba(0, 0, 0, 0.831372549)) padding-box, linear-gradient(to right, #00ffb7, #d795ff) border-box;
+  line-height: 53px;
+  color: #ffffff;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  padding-left: 45px;
+  padding-right: 120px;
+  font-size: 1rem;
+}
 
 .popup[id=popup-sent] .popup__content {
   padding: 24px 60px;
@@ -2735,10 +2872,111 @@ body._lock {
   }
 }
 
-.popup[id=popup-request] .popup__btn {
+.popup[id=popup-request] .popup__btn,
+.popup[id=popup-question] .popup__btn {
   align-self: stretch;
-  padding: 15px 40px;
   border-radius: 10px;
+}
+
+.popup[id=popup-question] .popup__content {
+  background: url(../img/popup/quiz_bg.webp) bottom center/cover no-repeat;
+  border-radius: 20px;
+  max-width: 477px;
+  padding: 50px 49px;
+}
+@media (max-width: 640px) {
+  .popup[id=popup-question] .popup__content {
+    max-width: 340px;
+    padding: 50px 35px;
+  }
+}
+.popup[id=popup-question] .popup__content::before {
+  border-radius: 20px;
+}
+
+.popup[id=popup-question] .popup__btn[id=btn1],
+.popup[id=popup-question] .popup__btn[id=btn2] {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0;
+}
+@media (max-width: 640px) {
+  .popup[id=popup-question] .popup__btn[id=btn1],
+  .popup[id=popup-question] .popup__btn[id=btn2] {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.popup[id=popup-question] .popup__btn[id=btn1] {
+  background: url(../img/popup/quiz__leftarrow.svg) 0 0/contain no-repeat;
+}
+
+.popup[id=popup-question] .popup__btn[id=btn2] {
+  background: url(../img/popup/quiz__rightarrow-dark.svg) 0 0/contain no-repeat;
+}
+
+.popup[id=popup-search] .popup__body {
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.popup[id=popup-search] .popup__content {
+  border-radius: 10px;
+  padding: 10px 30px;
+  background: rgba(29, 1, 65, 0.3);
+  flex-direction: row;
+  max-width: 800px;
+  box-shadow: none;
+  width: 100%;
+}
+.popup[id=popup-search] .popup__content::before {
+  display: none;
+}
+
+.popup[id=popup-search] .popup__form {
+  flex: 0 1 94%;
+  flex-direction: row;
+  align-items: stretch;
+  position: relative;
+}
+.popup[id=popup-search] .popup__form::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background: url(../img/popup/search.svg) no-repeat;
+}
+
+.popup[id=popup-search] .popup__btn {
+  margin-bottom: 0;
+  padding: 15px;
+  border-radius: none;
+  background: transparent;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #FFFFFF;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.popup[id=popup-search] .popup__btn:hover {
+  text-shadow: 0px 0px 10px #D795FF, 0px 0px 4px #D795FF;
+}
+
+.popup[id=popup-search] .popup__close {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background: url(../img/popup/close.svg) center center/contain no-repeat;
 }
 
 /*----------Footer----------*/

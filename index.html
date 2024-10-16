@@ -33,7 +33,7 @@
 						<a class="header__btn btn" href="#popup-request" data-popup-link>Задать вопрос</a>
 					</ul>
 					<div class="header__search">
-						<a href="#"><img src="./img/header/search.svg" alt="Search"></a>
+						<a href="#popup-search" data-popup-link><img src="./img/header/search.svg" alt="Search"></a>
 					</div>
 				</nav>
 				<div class="header__right">
@@ -43,11 +43,11 @@
 					<a class="header__btn btn" href="#popup-request" data-popup-link>Задать вопрос</a>
 				</div>
 				<div class="header__burger"><a href="#"><span></span></a></div>
-				<form class="header__form form-search" action="#">
+				<form class="header__form form-search" action="#" data-search>
 					<button class="form-search__btn" type="submit">
 						<img src="./img/header/search.svg" alt="Search">
 					</button>
-					<input class="form-search__text" type="text" name="search_request">
+					<input class="form-search__text" type="text" name="search_request" required>
 				</form>
 			</nav>
 			<nav class="header__breadcrumbs breadcrumbs">
@@ -466,7 +466,7 @@
 		<div class="sticky-btns">
 			<ul class="sticky-btns__list">
 				<li class="sticky-btns__item">
-					<a class="sticky-btns__link" href="#">
+					<a class="sticky-btns__link" href="#popup-question" data-popup-link>
 						<svg width="14" height="32" viewBox="0 0 19 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M9.04142 21.6667C8.37476 21.6667 7.81254 21.4306 7.35476 
 								20.9583C6.89698 20.4861 6.69531 19.9306 6.74976 19.2917C6.83309 
@@ -593,6 +593,220 @@
 									конфиденциальности</a></span>
 						</label>
 					</form>
+				</div>
+			</div>
+		</div>
+
+		<div id="popup-search" class="popup">
+			<div class="popup__body">
+				<div class="popup__content">
+					<form class="popup__form" action="#" data-search>
+						<input class="popup__search placeholder" type="text" name="search_request" placeholder="Поиск"
+							required>
+						<button class="popup__btn" type="submit">Искать</button>
+					</form>
+					<a class="popup__close" href="#"></a>
+				</div>
+			</div>
+		</div>
+
+		<div id="popup-question" class="popup">
+			<div class="popup__body">
+				<div class="popup__content">
+					<a class="popup__close" href="#"></a>
+					<div class="popup__quiz" id="quiz01">
+						<h3 class="popup__title">Выбрать услугу</h3>
+						<p class="popup__text">***</p>
+						<form class="popup__form" action="#" data-slide>
+							<label class="popup__radio">
+								<input type="radio" name="services" value="reklama">
+								<span>Контекстная реклама</span>
+							</label>
+							<label class="popup__radio">
+								<input type="radio" name="services" value="design">
+								<span>Дизайн</span>
+							</label>
+							<label class="popup__radio">
+								<input type="radio" name="services" value="crm">
+								<span>CRM</span>
+							</label>
+							<label class="popup__radio">
+								<input type="radio" name="services" value="telephone">
+								<span>Телефония</span>
+							</label>
+							<label class="popup__radio">
+								<input type="radio" name="services" value="site">
+								<span>Разработка сайтов</span>
+							</label>
+							<label class="popup__radio">
+								<input type="radio" name="services" value="server">
+								<span>Сервер</span>
+							</label>
+							<div class="popup__btns">
+								<button id="btn1" class="popup__btn" type="submit"></button>
+								<button id="btn2" class="popup__btn" type="submit"></button>
+							</div>
+						</form>
+					</div>
+					<div class="popup__quiz" id="quiz02">
+						<h3 class="popup__title">Выбрать услугу</h3>
+						<div class="popup__block" id="block-reklama">
+							<p class="popup__text">Контекстная реклама<span>*</span></p>
+							<form class="popup__form" action="#" data-slide>
+								<label class="popup__radio">
+									<input type="radio" name="reklama" value="ydx">
+									<span>Яндекс.Директ</span>
+								</label>
+								<label class="popup__radio">
+									<input type="radio" name="reklama" value="vk">
+									<span>VK реклама</span>
+								</label>
+								<label class="popup__radio">
+									<input type="radio" name="reklama" value="ydx-vk">
+									<span>Яндекс.Директ + VK реклама</span>
+								</label>
+								<div class="popup__btns">
+									<button id="btn1" class="popup__btn" type="submit"></button>
+									<button id="btn2" class="popup__btn" type="submit"></button>
+								</div>
+							</form>
+						</div>
+						<div class="popup__block" id="block-design">
+							<p class="popup__text">Дизайн<span>*</span></p>
+							<form class="popup__form" action="#" data-slide>
+								<label class="popup__radio">
+									<input type="radio" name="design" value="design-site">
+									<span>Дизайн сайта</span>
+								</label>
+								<label class="popup__radio">
+									<input type="radio" name="design" value="logo">
+									<span>Разработка логотипа</span>
+								</label>
+								<label class="popup__radio">
+									<input type="radio" name="design" value="icon-image">
+									<span>Отрисовка иконок и иллюстраций</span>
+								</label>
+								<label class="popup__radio">
+									<input type="radio" name="design" value="banners">
+									<span>Изготовление баннеров</span>
+								</label>
+								<input class="popup__other placeholder" type="text" name="design-text"
+									placeholder="Другое">
+								<div class="popup__btns">
+									<button id="btn1" class="popup__btn" type="submit"></button>
+									<button id="btn2" class="popup__btn" type="submit"></button>
+								</div>
+							</form>
+						</div>
+						<div class="popup__block" id="block-crm">
+							<p class="popup__text">CRM<span>*</span></p>
+							<form class="popup__form" action="#" data-slide>
+								<label class="popup__radio">
+									<input type="radio" name="crm" value="implementation">
+									<span>Внедрение CRM</span>
+								</label>
+								<label class="popup__radio">
+									<input type="radio" name="crm" value="extension">
+									<span>Продление лицензий</span>
+								</label>
+								<input class="popup__other placeholder" type="text" name="crm-text"
+									placeholder="Другое">
+								<div class="popup__btns">
+									<button id="btn1" class="popup__btn" type="submit"></button>
+									<button id="btn2" class="popup__btn" type="submit"></button>
+								</div>
+							</form>
+						</div>
+						<div class="popup__block" id="block-telephone">
+							<p class="popup__text">Телефония<span>*</span></p>
+							<form class="popup__form" action="#" data-slide>
+								<label class="popup__radio">
+									<input type="radio" name="telephone" value="business">
+									<span>Настройка для бизнеса</span>
+								</label>
+								<label class="popup__radio">
+									<input type="radio" name="telephone" value="private-use">
+									<span>Настройка для частного использования</span>
+								</label>
+								<input class="popup__other placeholder" type="text" name="telephone-text"
+									placeholder="Другое">
+								<div class="popup__btns">
+									<button id="btn1" class="popup__btn" type="submit"></button>
+									<button id="btn2" class="popup__btn" type="submit"></button>
+								</div>
+							</form>
+						</div>
+						<div class="popup__block" id="block-site">
+							<p class="popup__text">Разработка сайтов<span>*</span></p>
+							<form class="popup__form" action="#" data-slide>
+								<label class="popup__radio">
+									<input type="radio" name="site" value="landing">
+									<span>Лендинг</span>
+								</label>
+								<label class="popup__radio">
+									<input type="radio" name="site" value="multi-page">
+									<span>Многостраничный сайт</span>
+								</label>
+								<label class="popup__radio">
+									<input type="radio" name="site" value="online-store">
+									<span>Интернет-магазин</span>
+								</label>
+								<label class="popup__radio">
+									<input type="radio" name="site" value="quiz">
+									<span>Опросник (Квиз)</span>
+								</label>
+								<input class="popup__other placeholder" type="text" name="site-text"
+									placeholder="Другое">
+								<div class="popup__btns">
+									<button id="btn1" class="popup__btn" type="submit"></button>
+									<button id="btn2" class="popup__btn" type="submit"></button>
+								</div>
+							</form>
+						</div>
+						<div class="popup__block" id="block-server">
+							<p class="popup__text">Сервер<span>*</span></p>
+							<form class="popup__form" action="#" data-slide>
+								<label class="popup__radio">
+									<input type="radio" name="server" value="less-100">
+									<span>Сервер для бизнеса до 100 человек</span>
+								</label>
+								<label class="popup__radio">
+									<input type="radio" name="server" value="more-100">
+									<span>Сервер для бизнеса более 100 человек</span>
+								</label>
+								<input class="popup__other placeholder" type="text" name="server-text"
+									placeholder="Другое">
+								<div class="popup__btns">
+									<button id="btn1" class="popup__btn" type="submit"></button>
+									<button id="btn2" class="popup__btn" type="submit"></button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="popup__quiz" id="quiz03">
+						<h3 class="popup__title">Заказать услугу</h3>
+						<p class="popup__text">Оставьте свои контактные данные, и мы свяжемся с Вами в течение 20 минут
+						</p>
+						<form class="popup__form" action="#">
+							<div class="popup__input-br">
+								<input class="popup__name placeholder" type="text" name="name" placeholder="Имя*"
+									required>
+							</div>
+							<div class="popup__input-br">
+								<input class="popup__tel" type="tel" name="tel" data-tel-input>
+							</div>
+							<div class="popup__input-br">
+								<input class="popup__email placeholder" type="email" name="email" placeholder="E-mail*"
+									required>
+							</div>
+							<button class="popup__btn btn" type="submit">Отправить заявку</button>
+							<label class="popup__checkbox">
+								<input type="checkbox" name="agreement" value="agree" checked required>
+								<span>Нажимая на кнопку, я соглашаюсь с условиями <a href="#">политики
+										конфиденциальности</a></span>
+							</label>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -257,27 +257,88 @@ document.addEventListener('DOMContentLoaded', () => {
         let isValid = true;
         const formFields = e.currentTarget.elements;
 
+        if (e.currentTarget.hasAttribute('data-search')) {
+            /*
+                 ...
+ 
+                 Логика отправки данных с формы на сервер
+ 
+                 ...
+             */
+            e.currentTarget.reset();
+        } else if (e.currentTarget.hasAttribute('data-slide')) {
+            const currentElement = e.currentTarget.closest('.popup__quiz');
 
-        for (let field of formFields) {
-            if (field.type === 'text' || field.type === 'password' || field.tagName.toLowerCase() === 'textarea') {
-                if (!field.value.trim()) {
-                    isValid = false;
-                }
+            if (e.submitter.id === 'btn1') {
+                e.currentTarget.reset();
+                currentElement.style.display = 'none';
+                currentElement.previousElementSibling.style.display = 'flex';
+
+                const openBlock = e.currentTarget.closest('.popup__block');
+                openBlock.style.display = 'none';
             }
 
-            if (field.type === 'radio') {
-                const radioGroupName = field.name;
-                const radioGroup = e.currentTarget.querySelectorAll(`input[name="${radioGroupName}"]`);
-                const isRadioChecked = Array.from(radioGroup).some(radio => radio.checked);
+            if (e.submitter.id === 'btn2') {
+                const allOther = document.querySelectorAll('.popup__other');
+                const allRadio = document.querySelectorAll('.popup__radio');
 
-                if (!isRadioChecked) {
-                    isValid = false;
+                for (let field of formFields) {
+                    const other = e.currentTarget.querySelector('.popup__other');
+
+                    if (other) {
+                        if (field.type === 'radio') {
+                            const radioGroupName = field.name;
+                            const radioGroup = e.currentTarget.querySelectorAll(`input[name="${radioGroupName}"]`);
+                            const isRadioChecked = Array.from(radioGroup).some(radio => radio.checked);
+                            if (!isRadioChecked && !other.value.trim()) {
+                                isValid = false;
+                            }
+                        }
+                    } else {
+                        if (field.type === 'radio') {
+                            const radioGroupName = field.name;
+                            const radioGroup = e.currentTarget.querySelectorAll(`input[name="${radioGroupName}"]`);
+                            const isRadioChecked = Array.from(radioGroup).some(radio => radio.checked);
+
+                            if (!isRadioChecked) {
+                                isValid = false;
+                            }
+                        }
+                    }
+                }
+
+                if (isValid) {
+                    allOther.forEach(other => {
+                        other.classList.remove('_error');
+                    });
+
+                    allRadio.forEach(radio => {
+                        radio.classList.remove('_error');
+                    });
+
+                    currentElement.style.display = 'none';
+                    currentElement.nextElementSibling.style.display = 'flex';
+
+                    if (currentElement.id === "quiz01") {
+                        for (let field of formFields) {
+                            if (field.checked) {
+                                const checkedRadio = field;
+                                const checkedRadioValue = checkedRadio.value;
+                                const openBlock = document.getElementById(`block-${checkedRadioValue}`);
+                                openBlock.style.display = 'block';
+                            }
+                        }
+                    }
+                } else {
+                    allOther.forEach(other => {
+                        other.classList.add('_error');
+                    });
+
+                    allRadio.forEach(radio => {
+                        radio.classList.add('_error');
+                    });
                 }
             }
-        }
-
-        if (!isValid) {
-            alert("Заполните форму");
         } else {
             /*
                 ...
